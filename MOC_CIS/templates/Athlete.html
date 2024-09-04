@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Athlete</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="../static/css/main.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="head">
+        <a href="https://moc.miraheze.org/m/3"><img src="../static/img/MOC.png" width="10%"></a>
+        <div id="headtext">运动员档案</div>
+    </div>
+
+    <div class="row" height="100%">
+    <div class="intro col-3">
+        <h1 style="margin-bottom:20px;">基本信息</h1>
+        <center>
+            <img src="../static/img/head/{{name}}.png" width="100px" class="headimg">
+            <h3 class="headline">{{name}}</h3>
+            <div style="font-size: 1.5rem;">常用游戏版本:<div class="headline">{{useVersion}}</div></div>
+        </center>
+    </div>
+    <div class="achieve col-7">
+        <h1 style="margin-bottom:20px;">成就</h1>
+        <h3>个人最好成绩</h3>
+        <table border="1" style="margin-bottom:20px;">
+            {% for i in mostAchieve %}
+            <tr>
+                <td>{{i}}</td>
+                <td>{{mostAchieve[i]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <h3 >可查历史成绩</h3>
+        {% for i in achieve %}
+            <h5>{{i}}</h5>
+            <table border="1" style="margin-bottom:20px;">
+                {% for m in achieve[i] %}
+                    <tr>
+                        <td>{{m}}</td>
+                        <td>{{achieve[i][m]}}{{unit}}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% endfor %}
+
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-ep+dxp/oz2RKF89ALMPGc7Z89QFa32C8Uv1A3TcEK8sMzXVysblLA3+eJWTzPJzT" crossorigin="anonymous"></script>
+</body>
+</html>

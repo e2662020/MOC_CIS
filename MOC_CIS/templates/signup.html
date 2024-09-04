@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="../static/css/login.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon">
+    <title>登录-MOC CIS</title>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            background-color: white;
+            height: 98%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        body .card {
+            margin: 0 50px 0 50px;
+        }
+
+        body .card:first-child {
+            height: 400px;
+            width: 711px;
+            background-image: url("../static/img/登录界面.png");
+            background-size: 110%;
+            background-position: top;
+            /*            animation: run 1000s linear infinite;*/
+        }
+
+        /*        @keyframes run {
+                    from {background-position:-30000px -30000px;}
+                    to {background-position: 0 0;}
+                }*/
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+            transition: all 0.5s cubic-bezier(0, 1, 0, 1) 0s;
+            width: 350px;
+            /*动画预备*/
+            position: relative;
+            top: 200px;
+        }
+
+        form input {
+            margin: 15px 0 10px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="card pcElement"></div>
+<form action="/loginpost" method="post">
+    <h3>欢迎回来</h3>
+    <input name="user" placeholder="账号" type="text">
+    <input name="pwd" placeholder="密码" type="password">
+	<input name="key" placeholder="邀请码" type="text">
+    <input class="bg-button-blue" type="submit" value="登录">
+    <center><p style="color: #grey;">登录注册界面开发：iCE CUBE</p></center>
+
+</form>
+<div style="position:fixed;top:20px;left:20px;">
+    <a href="https://tgfmc.top/"><img alt="MOC LOGO" src="../static/img/MOC_black.png" width="120px"></a>
+</div>
+<script>
+    //form入场动画
+    let oForm = document.getElementsByTagName("form")[0];
+    setTimeout("oForm.style.top = \"0\"", 100);
+    /////form入场动画
+</script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+/*欢迎使用THINICE薄冰CSS框架，该框架由iCE CUBE开发，GITHUB：https://github.com/iDea-iCE-CUBE/ThiniceOpenSource*/
+body {
+    background-color: #fafafa;
+    color: #2c353e;
+}
+
+.card {
+    /*卡片*/
+    border-radius: 10px;
+    background-color: #FFF;
+    min-width: 10px;
+    min-height: 10px;
+    padding: 1em;
+    margin: 10px auto 10px auto;
+    box-shadow: 0 0 25px rgba(36, 37, 38, 0.1);
+}
+
+.fallInto {
+    /*陷入*/
+    border-radius: 10px;
+    background-color: rgb(250, 250, 250);
+    min-width: 10px;
+    min-height: 10px;
+    padding: 1em;
+    margin: 30px auto 30px auto;
+}
+
+.glass {
+    /*玻璃*/
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    min-width: 10px;
+    min-height: 10px;
+    padding: 1em;
+    margin: 10px auto 10px auto;
+}
+
+.gl-black {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+h1, h2, h3, h4, h5, h6, ul, ol {
+    margin: 0;
+}
+
+*:disabled {
+    /*禁止访问的表单样式*/
+    cursor: not-allowed !important;
+    filter: brightness(90%);
+}
+
+input[type="text"], input[type="email"], input[type="password"],input[type="date"] {
+    /*文本框样式*/
+    border-radius: 8px;
+    background-color: rgb(245, 245, 245);
+    border: none;
+    outline: none;
+    transition: all 0.1s linear 0s;
+    padding: 15px 6px 16px 18px;
+    height: 12px;
+    min-width: 100px; /*124px*/
+}
+
+textarea {
+    /*多行文本框样式*/
+    border-radius: 8px;
+    background-color: rgb(245, 245, 245);
+    border: none;
+    outline: none;
+    font-family: 微软雅黑;
+    padding: 15px 18px 16px 18px;
+    transition: box-shadow 0.1s linear 0s;
+    min-width: 100px;
+}
+
+input[type="text"]:focus,input[type="date"]:focus,input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:hover {
+    /* 文本框获取焦点样式*/
+    box-shadow: 0 0 0 2px rgba(30, 144, 255, 0.8);
+}
+
+button, input[type=submit], input[type=reset], input[type=button] {
+    /*按钮样式*/
+    -webkit-appearance: none; /*解决iphone safari上的圆角问题*/
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-weight: bold;
+    transition: all 0.1s linear 0s;
+    line-height: inherit;
+    padding: 0 12px 0 12px;
+    height: 43px;
+    min-width: 100px;
+}
+
+button:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover {
+    /*按钮鼠标停留样式*/
+    cursor: pointer;
+    filter: brightness(90%);
+}
+
+select {
+    /*选择框样式*/
+    border-radius: 8px;
+    background-color: rgb(245, 245, 245);
+    border: none;
+    outline: none;
+    height: 43px;
+    padding: 0 18px 0 18px;
+    transition: box-shadow 0.1s linear 0s;
+    min-width: 100px; /*124px*/
+}
+
+input[type=checkbox], input[type=radio] {
+    /*单选框、复选框样式*/
+    accent-color: #0075ff;
+}
+
+input[type="range"] {
+    /*取值条样式*/
+    accent-color: #0075ff;
+}
+
+a:link {
+    color: dodgerblue;
+}
+
+a:visited {
+    /* 访问后状态 */
+    color: #1e5eff;
+}
+
+a:hover {
+    /* 鼠标悬浮状态 */
+    color: #1e96ff;
+}
+
+.bg-button-white {
+    /*黑色字体按钮*/
+    color: black;
+}
+
+.bg-button-blue {
+    /*蓝色按钮*/
+    color: white;
+    background-color: #0075ff;
+}
+
+.bg-button-green {
+    /*绿色按钮*/
+    color: white;
+    background-color: #2ad200;
+}
+
+.bg-button-red {
+    /*红色按钮*/
+    color: white;
+    background-color: #ff3131;
+}
+
+#lights, .bg-button-lights {
+    /*光源色按钮*/
+    color: white;
+    transition: all 0.5s cubic-bezier(0, 1, 0, 1) 0s !important;
+    background: linear-gradient(121deg, #FEE102 -20%, #FCA601 70%);
+    box-shadow: 0px 0px 10px 0px rgba(252, 166, 1, 0.3);
+}
+
+#lights:hover, .bg-button-lights:hover {
+    filter: brightness(100%) !important;
+    box-shadow: 0px 0px 20px 0px rgba(252, 166, 1, 0.3);
+    letter-spacing: 0.5em;
+}
+
+@media screen and (min-width: 700px) {
+    /*隐藏移动元素*/
+    .peElement {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    /*隐藏桌面元素*/
+    .pcElement {
+        display: none;
+    }
+}

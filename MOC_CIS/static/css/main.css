@@ -1,0 +1,98 @@
+@font-face {
+  font-family: "Headline";
+  src: url("../font/Headline.ttf");
+}
+
+.head{
+/*	width: 100%;*/
+	background-color: #1e90ff;
+	padding: 20px 25px;
+	color: #fff;
+}
+
+.head img{
+/*	display: inline-block;*/
+	vertical-align: middle;
+}
+
+#headtext{
+	display: inline-block;
+/*	vertical-align: middle;*/
+	font-size: 1.5rem;
+	margin-left: 20px;
+}
+
+.main{
+	margin: 10px;
+	color: #000;
+}
+
+.intro{
+	padding: 20px;
+	background-color: #70a1ff;
+	height: 100%;
+	color: #fff;
+	margin: 10px;
+	margin-left: 30px;
+	border-radius: 10px;
+	box-shadow: rgba(112, 161, 255, 1) 0px 5px 15px;
+}
+
+.headline{
+	font-family: 'Headline';
+	margin-top: 30px;
+	font-size: 3rem;
+}
+
+.achieve{
+	padding: 20px;
+	height: 100%;
+}
+
+.headimg{
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -o-crisp-edges;
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: pixelated;
+	-ms-interpolation-mode: nearest-neighbor;
+	border-radius: 20px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+table{
+	width: 100%;
+	border-collapse: collapse;
+	border-radius: 10px;
+}
+
+td{
+	border: 1.25px solid #000;
+	text-align: center;
+	padding: 20px 0;
+}
+
+table thead tr{
+	background-color: #008c8c;
+	color: #fff;
+}
+
+/*table tbody tr:nth-child(odd){
+    background-color: #eee;
+}*/
+
+/*table tbody tr td:first-child{
+    color: #70a1ff;
+}*/
+
+table tbody tr:hover{
+	background-color: #70a1ff;
+	color: #fff;
+	transition: 
+	background-color 0.2s,
+	color 0.2s;
+}
+
+table tfoot tr td{
+	text-align: right;
+	padding-right: 20px;
+}
